@@ -39,10 +39,10 @@ driver.find_element(By.XPATH, value = '//*[@id="submit_btn"]').click()
 time.sleep(1)
 
 # reulst table
+# Error when you trying to access the table right away. Because it is in iframe, it acts as if it is loading another web page
 iframe = driver.find_element(By.XPATH, value = '//*[@id="lottoBuyList"]')
 driver.switch_to.frame(iframe)
-tbl = driver.find_element(By.XPATH, value='/html/body/table') # Error when you trying to access the table right away. Because it is in iframe, it acts as if it is loading another web page
-
+tbl = driver.find_element(By.XPATH, value='/html/body/table') 
 tbl_list = []
 table_tr = tbl.find_elements(By.TAG_NAME, 'tr')
 tbl_list.append([i.text for i in table_tr[0].find_elements(By.TAG_NAME, 'th')])
