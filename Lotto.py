@@ -9,7 +9,7 @@ from tabulate import tabulate
 import re
 
 # Create a bot in advance from the slack
-slack_token = 'xoxb-5570734011559-5625437831972-xlHwW1xQteOrsunQmxKs6flp'
+slack_token = 'your_slack_token' # write down your slack bot token
 client = slack_sdk.WebClient(token=slack_token)
 
 # send today's date
